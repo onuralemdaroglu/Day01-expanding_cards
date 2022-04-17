@@ -1,0 +1,70 @@
+/* Orbitron Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+    background-color: #000000;
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+}
+
+.panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 30px;
+    cursor: crosshair;
+    position: relative;
+    flex: 0.5;
+    --webkit-transition: all 700ms ease-in;
+    color: #fff;
+    margin: 10px;
+}
+
+
+.panel h3 {
+    color: #fff;
+    font-size: 0.2rem;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    margin: 0;
+    opacity: 0.2;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+    color: rgb(255, 255, 0);
+    font-size: xx-large;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100vw;
+    }
+
+    .board:nth-of-type(4), 
+    .board:nth-of-type(5) {
+        display: none;
+    }
+
+}
